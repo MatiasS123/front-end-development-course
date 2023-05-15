@@ -1,0 +1,85 @@
+.Navbar {
+  display: flex;
+  height: var(--base);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.NavButton {
+  display: flex;
+  align-items: center;
+  height: var(--base);
+  width: var(--base);
+}
+
+.NavButton button {
+  height: calc(var(--base)/1.25);
+  width: calc(var(--base)/1.25);
+  padding: 0;
+  background: none;
+  background-image: url(../graphics/dropdown.svg);
+  background-size: contain;
+  border: solid;
+  border-style:solid;
+  color: black;
+  border-radius: 128px;
+  cursor: pointer;
+  margin-left: calc(var(--base)/7.5);
+}
+
+.LogoContainer {
+  height: var(--base);
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.NavBarMenu {
+    z-index: 1;
+    font-size: calc(2.5*1.953*var(--contentScale));
+    font-family: font;
+    width: calc(var(--base)*3.375);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-left: calc(var(--base)/7.5);
+    border-radius: calc(var(--base)/2.25);
+}
+.NavBarMenu::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  backdrop-filter: blur(6px);
+  padding-right: 1.7px;
+}
+
+
+
+.NavBarMenuItem {
+  font-size: calc(0.5*var(--base));
+  text-decoration: none;
+  height: calc(var(--base)/1.25);
+  width: 100%;
+  background: none;
+  background-size: contain;
+  border: solid;
+  border-style:solid;
+  color: black;
+  border-radius: 128px;
+  cursor: pointer;
+  margin-bottom: calc(var(--base)/7.5);
+}
+
+.NavButton :last-child {
+  margin-bottom: 0;
+}
